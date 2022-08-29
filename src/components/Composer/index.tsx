@@ -10,7 +10,7 @@ export default function Compose() {
 	} = useApp();
 
 	return openComposer ? (
-		<div className="absolute right-5 bottom-2 w-1/3 shadow-md rounded-md border">
+		<div className="absolute right-5 bottom-2 w-1/3 shadow-md rounded-md border bg-white">
 			<div className="flex justify-between bg-gray-100 px-2 py-3 border-t border-l border-l rounded-sm w-full items-center h-12">
 				<div className="w-48 text-sm font-semibold text-gray-700">
 					Mensaje nuevo
@@ -45,7 +45,7 @@ export default function Compose() {
 						className="w-full py-2 px-2 outline-none text-sm border-b"
 					/>
 				</div>
-				<div className="mt-2 border-b">
+				<div className="border-b">
 					<textarea
 						placeholder="Escribe tu mensaje"
 						className="w-full py-2 px-2 outline-none text-sm"

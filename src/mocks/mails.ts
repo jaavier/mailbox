@@ -10,6 +10,15 @@ const mails: Mail[] = [
 	},
 	{
 		from: "email@example.com",
+		nameFrom: "John Doe",
+		body: "Tienes un descuento en...",
+		date: "Ayer",
+		subject: "Importante!",
+		category: "principal",
+    id: 1273618273
+	},
+	{
+		from: "email@example.com",
 		nameFrom: "Social Sender",
 		body: "Mensaje X",
 		date: "01:04",

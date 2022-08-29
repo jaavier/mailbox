@@ -5,18 +5,22 @@ import Sidebar from "./layout/Sidebar";
 import { AppProvider } from "./context/App";
 import Inbox from "./components/Inbox";
 import Composer from "./components/Composer";
+import Search from "./components/Search";
 
 function App() {
 
   return (
 		<AppProvider>
-			<Layout>
-				<Sidebar />
-				<Container>
-					<Inbox />
-				</Container>
-			</Layout>
-			<Composer />
+			<div className="bg-gradient-to-b from-slate-900	to-slate-700 h-screen">
+				<Layout>
+					<Sidebar />
+					<Container>
+						<Search />
+						<Inbox />
+					</Container>
+				</Layout>
+				<Composer />
+			</div>
 		</AppProvider>
 	);
 }
