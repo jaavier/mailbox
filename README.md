@@ -9,6 +9,8 @@ Still under construction. Feel free to contribute :)
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/990085/187191712-1ec35e35-4464-43de-ad14-ccd528576516.png">
 
 # Preview Dark Mode
+You can try this version in branch **feature/dark-mode**
+
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/990085/187427825-213f1211-18a3-4824-ae4f-7d7d7972da64.png">
 
 # Clone repo
