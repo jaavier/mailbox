@@ -16,7 +16,9 @@ function App() {
 					<Sidebar />
 					<Container>
 						<Search />
-						<Inbox />
+            <div className="px-2 lg:px-0">
+  						<Inbox />
+            </div>
 					</Container>
 				</Layout>
 				<Composer />

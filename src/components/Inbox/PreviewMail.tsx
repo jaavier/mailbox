@@ -24,9 +24,11 @@ export default function PreviewMail(mail: Mail) {
 					checked={selected.indexOf(mail.id) !== -1}
 				/>
 			</div>
-			<div className="w-52">{mail.nameFrom}</div>
-			<div className="">{mail.subject}</div>
-			<div className="ml-3 text-xs font-light flex-1">- {mail.body}</div>
+			<div className="lg:w-52 lg:mr-0 mr-2 font-extrabold">{mail.nameFrom}</div>
+			<div className="text-xs">{mail.subject}</div>
+			<div className="ml-3 text-xs font-light flex-1">
+        <div className="hidden lg:block">- {mail.body}</div>
+      </div>
 			<div className="mr-2 text-xs">{mail.date}</div>
 		</div>
 	);
