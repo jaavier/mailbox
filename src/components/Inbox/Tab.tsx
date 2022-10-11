@@ -1,18 +1,21 @@
-import { useApp } from "../../context/App";
+import {
+  Link, useParams,
+} from "react-router-dom";
 
 export default function Tab(props: Tab) {
-	const { activeTab, setActiveTab } = useApp();
+  const { category } = useParams()
+  const propsActive = `border-b-4 border-${props.color}-500 bg-${props.color}-50/75 text-${props.color}-600 font-extrabold`;
+  const propsInactive = `hover:bg-gray-200 font-light border-b`;
 
-	return (
-		<div
-			className={`lg:p-5 py-4 text-center hover:cursor-pointer text-white text-xs lg:text-base ${
-				activeTab === props.id
-					? `border-b-4 border-${props.color}-500 font-semibold bg-gradient-to-b from-slate-900	to-slate-700`
-					: `hover:from-slate-900	hover:to-slate-600 hover:bg-gradient-to-b`
-			}`}
-			onClick={() => setActiveTab(props.id)}
-		>
-			{props.title}
-		</div>
-	);
+  return (
+    <Link
+      to={`/category/${props.id}`}
+      className={`lg:p-5 py-4 bg-slate-50 text-center hover:cursor-pointer text-xs lg:text-sm
+      ${category === props.id ? propsActive
+        : propsInactive
+      }`}
+    >
+      {props.title}
+    </Link>
+  );
 }
