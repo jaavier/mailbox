@@ -33,10 +33,8 @@ const AppProvider = ({ children }: any) => {
 	};
 
 	return (
-		<Context.Provider
-			value={values}
-		>
-			{children}
+    <Context.Provider value={values}>
+      {children}
 		</Context.Provider>
 	);
 };
