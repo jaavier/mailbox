@@ -6,7 +6,7 @@ This project could be used with other purposes, like project managment, ticket m
 Still under construction. Feel free to contribute :) 
 
 # Preview
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/990085/187191712-1ec35e35-4464-43de-ad14-ccd528576516.png">
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/990085/195295704-977643b2-595c-4b1b-af20-7781f8176677.png">
 
 # Preview Dark Mode
 You can try this version in branch **feature/dark-mode**
