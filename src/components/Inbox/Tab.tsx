@@ -12,8 +12,8 @@ export default function Tab(props: Tab) {
       to={`/category/${props.id}`}
       className={`lg:p-5 py-4 bg-slate-50 text-center hover:cursor-pointer text-xs lg:text-sm
       ${category === props.id ? propsActive
-        : propsInactive
-      }`}
+          : propsInactive
+        }`}
     >
       {props.title}
     </Link>

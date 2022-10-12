@@ -7,7 +7,6 @@ export default function Sent() {
       {mails.map((mail: Mail, index: number) => (
         <PreviewMail {...mail} key={index} />
       ))}
-
     </div>
   );
 }

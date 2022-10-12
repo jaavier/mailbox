@@ -9,31 +9,31 @@ export default function PreviewMail(mail: Mail) {
   const [selected, setSelected] = useState<number[]>([]);
 
   return (
-		<div
+    <div
       onClick={() => {
         navigate(`/read/${mail.id}`)
       }}
-			className={`${commonMailProps} ${mailHoverProps} ${
-        !mail.readed ? "font-semibold text-gray-900" : "bg-violet-200/40"
+      className={`${commonMailProps} ${mailHoverProps} ${!mail.readed ? "font-semibold text-gray-900" : "bg-gray-300"
         } ${selected.indexOf(mail.id) === -1 ? "bg-gray-50" : "bg-transparent"}`}
-		>
-			<div className="mr-5 h-4">
-				<input
-					type="checkbox"
-					onChange={() => {
-						if (selected.indexOf(mail.id) === -1)
-							setSelected([...selected, mail.id]);
-						else setSelected(selected.filter((i) => i !== mail.id));
-					}}
-					checked={selected.indexOf(mail.id) !== -1}
-				/>
-			</div>
+    >
+      <div className="mr-5 h-4">
+        <input
+          type="checkbox"
+          onChange={() => {
+            if (selected.indexOf(mail.id) === -1)
+              setSelected([...selected, mail.id]);
+            else
+              setSelected(selected.filter((i) => i !== mail.id));
+          }}
+          checked={selected.indexOf(mail.id) !== -1}
+        />
+      </div>
       <div className={`lg:w-52 lg:mr-0 mr-2 ${!mail.readed && "font-extrabold"}`}>{mail.nameFrom}</div>
-			<div className="text-sm">{mail.subject}</div>
-			<div className="ml-3 text-sm font-extralight flex-1">
+      <div className="text-sm">{mail.subject}</div>
+      <div className="ml-3 text-sm font-extralight flex-1">
         <div className="hidden lg:block text-xs">{mail.body}</div>
       </div>
-			<div className="mr-2 text-xs">{mail.date}</div>
-		</div>
-	);
+      <div className="mr-2 text-xs">{mail.date}</div>
+    </div>
+  );
 }

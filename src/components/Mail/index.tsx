@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import Actions from "./Actions";
 import Tag from "./Tag";
 
-export default function Mail () {
+export default function Mail() {
   const { mailId } = useParams();
 
   return (

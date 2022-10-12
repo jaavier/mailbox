@@ -22,7 +22,6 @@ export default function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [tabSelected, setTabSelected] = useState<string>("received");
   const fontButton = "text-white font-semibold text-center text-sm"
   const colorsButton = "border-blue-600 bg-blue-800"
   const otherPropsButton = "rounded-xl py-4 px-6 hover:cursor-pointer"
@@ -45,7 +44,7 @@ export default function Sidebar() {
         </div>
       </div>
       <div className="flex flex-col relative items-center lg:items-stretch mt-2">
-        <div className="lg:hidden block text-center bg-gray-100 p-2 w-42 mt-3 text-xs" onClick={() => setShowMenu(!showMenu)}>
+        <div className="lg:hidden block text-center bg-gray-100 p-2 w-42 mt-3 text-xs rounded-lg" onClick={() => setShowMenu(!showMenu)}>
           MENU
         </div>
         <div className={`${propsMenuDesktop} ${propsMenuMobile} ${commonPropsMenu}`}>
@@ -55,7 +54,8 @@ export default function Sidebar() {
                 key={index}
                 className={`p-2 border border-gray-200 mx-2 ${location.pathname === `/${item.name}` ? "bg-gray-200 font-bold" : "bg-slate-50"}`}
                 onClick={() => {
-                  navigate(`/${item.name}`)
+                  navigate(`/${item.name}`);
+                  setShowMenu(false);
                 }}
               >
                 {item.label}
